@@ -1,9 +1,12 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exercicio03 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double[] media = new double[5];
+        DecimalFormat df = new DecimalFormat("0.00");
+
+        double[] media = new double[3];
         int numAlunos = 0;
 
         for (int i = 0; i < media.length; i++) {
@@ -24,6 +27,12 @@ public class Exercicio03 {
 
                 System.out.println("==========");
         }
+
+        System.out.println("\nMédia dos alunos ");
+        for (int i = 0; i < media.length; i++){
+            System.out.println( (i+1) + " " + df.format(media[i]));
+        }
+
         System.out.println("Numeros de alunos com média maior ou igual a 6,0 -->  " + numAlunos);
         sc.close();
     }
